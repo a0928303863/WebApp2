@@ -19,10 +19,13 @@ public class MainActivity extends AppCompatActivity {
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()) {
                 case R.id.navigation_home:
+                    mWebView.loadUrl("http://10.0.2.2/whatapp");
                     return true;
                 case R.id.navigation_dashboard:
+                    mWebView.loadUrl("http://10.0.2.2/whatapp/index.php/2017-06-21-02-08-58");
                     return true;
                 case R.id.navigation_notifications:
+                    mWebView.loadUrl("http://10.0.2.2/whatapp/index.php/2017-06-21-02-11-38");
                     return true;
             }
             return false;
@@ -41,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
         //開啟JS功能，讓網頁中的JS可以執行
         mWebView.getSettings().setJavaScriptEnabled(true);
         //導頁到google的網頁
-        mWebView.loadUrl("https://www.google.com");
+        mWebView.loadUrl("http://10.0.2.2/whatWeb/index.html");
 
 
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
